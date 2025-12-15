@@ -1,0 +1,67 @@
+:root {
+  --bg-0: #0b0e13;
+  --bg-1: #0e1116;
+  --bg-2: #10141a;
+  --bd-1: #1a1f26;
+  --tx-1: #e5e7eb;
+  --tx-2: #cfd3da;
+  --tx-3: #8b8f97;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg-0);
+  color: var(--tx-1);
+  overflow: hidden;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+button {
+  background: transparent;
+  color: var(--tx-2);
+  border: 1px solid var(--bd-1);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--bg-2);
+}
+
+input, textarea {
+  background: var(--bg-1);
+  color: var(--tx-1);
+  border: 1px solid var(--bd-1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--tx-3);
+}
+
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bd-1);
+  border-radius: 10px;
+}
