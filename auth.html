@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access – AI Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      <h2>AI Studio</h2>
+    </div>
+
+    <div class="auth-header">
+      <h1>Access Portal</h1>
+      <p>Enter to continue</p>
+    </div>
+
+    <div class="auth-error hidden" id="authError">Access denied</div>
+
+    <form class="auth-form" id="authForm">
+
+      <div>
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Username" required>
+      </div>
+
+      <div>
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+
+      <button type="submit">Enter</button>
+
+    </form>
+
+    <div class="auth-footer">
+      Secured access environment
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById("authForm")
+  form.addEventListener("submit", e => {
+    e.preventDefault()
+    localStorage.setItem("access", "true")
+    window.location.href = "index.html"
+  })
+</script>
+
+</body>
+</html>
